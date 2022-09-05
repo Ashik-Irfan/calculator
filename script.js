@@ -4,7 +4,7 @@ let opt;
 let lhs = 0,rhs = 0;
 function number(num){
   a=a+num;
-  result.innerText = +a;
+  result.innerText = parseInt(a);
 }
 function clr(){
   result.innerText = 0;
@@ -13,15 +13,14 @@ function clr(){
 }
 function operate(str){
   lhs = result.innerText;
-  result.innerText = '';
+  result.innerText = lhs;
   a = '';
   opt=str;
 }
 function edit(){
   let unit = result.innerText;
   const num = unit.toString().split('').slice(0, -1).join('');
-  result.innerText = +num;
-
+  result.innerText = parseInt(num);
 }
 function out(mono){
   rhs = result.innerText;
@@ -39,10 +38,11 @@ function out(mono){
     result.innerText = lhs/rhs;
   }
   else if(mono === '%'){
-    result.innerText = rhs/100;
+    result.innerText = result.innerText/100;
   }
-  else if(mono === '-'){
-    result.innerText = -(rhs);
+  else if(mono === '+/-'){
+    result.innerText = -(result.innerText);
   }
   lhs=rhs=0;
+  opt = '';
 }
