@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 *{
   font-family: 'Roboto', sans-serif;
+  transition: all 0.15s;
 }
 body{
   display: flex;
@@ -57,15 +58,35 @@ body{
 }
 .btn{
   background:rgb(245,247,250);
+  transition: all 0.15s;
+}
+.btn:active{
+  color:rgb(245,247,250);
+  background:black;
 }
 .btn-blue{
   background:rgb(201,230,252);
+  transition: all 0.15s;
+}
+.btn-blue:active{
+  color:rgb(201,230,252);
+  background: black;
 }
 .btn-green{
   background:rgb(204,237,210);
+  transition: all 0.15s;
+}
+.btn-green:active{
+  color:rgb(204,237,210);
+  background: black;
 }
 .btn-lightblue{
   background:rgb(214,226,250);
+  transition: all 0.15s;
+}
+.btn-lightblue:active{
+  color:rgb(214,226,250);
+  background: black;
 }
 img{
   height:25px;
