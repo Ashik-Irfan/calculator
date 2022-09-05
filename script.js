@@ -35,10 +35,10 @@ function out(mono){
     result.innerText = lhs*rhs;
   }
   else if (opt === '/'){
-    result.innerText = lhs/rhs;
+    result.innerText = (lhs/rhs).toFixed(8);
   }
   else if(mono === '%'){
-    result.innerText = result.innerText/100;
+    result.innerText = (result.innerText/100).toFixed(8);
   }
   else if(mono === '+/-'){
     result.innerText = -(result.innerText);
