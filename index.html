@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculator</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="phone">
+      <div class="result">
+        <div id='result' class="output">
+          0
+        </div>
+      </div>
+      <div class="buttons">
+        <div class="button-row">
+          <button onclick="clr()" class="btn-green">AC</button>
+          <button onclick="out('-')" class="btn-blue">+/-</button>
+          <button onclick="out('%')" class="btn-blue">%</button>
+          <button onclick="operate('x')" class="btn-blue">x</button>
+        </div>
+        <div class="button-row">
+          <button onclick="number(7)"  class="btn">7</button>
+          <button onclick="number(8)"  class="btn">8</button>
+          <button onclick="number(9)" class="btn">9</button>
+          <button onclick="operate('/')" class="btn-blue">/</button>
+        </div>
+        <div class="button-row">
+          <button onclick="number(4)" class="btn">4</button>
+          <button onclick="number(5)" class="btn">5</button>
+          <button onclick="number(6)" class="btn">6</button>
+          <button onclick="operate('-')" class="btn-blue">-</button>
+        </div>
+        <div class="button-row">
+          <button onclick="number(1)" class="btn">1</button>
+          <button onclick="number(2)" class="btn">2</button>
+          <button onclick="number(3)" class="btn">3</button>
+          <button onclick="operate('+')" class="btn-blue">+</button>
+        </div>
+        <div class="button-row">
+          <button onclick="number(0)" class="btn" style="width:130px;">0</button>
+          <button onclick="edit()" class="btn"><img src="backspace.png"></button>
+          <button onclick="out(1)" class="btn-lightblue">=</button>
+        </div>
+      </div>
+    </div>
+    <div class="creds">
+      Created by <img src="a.svg" /> ASHIK
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
