@@ -3,6 +3,14 @@
   font-family: 'Roboto', sans-serif;
   transition: all 0.15s;
 }
+@media screen and (max-width: 400px){
+      body{
+        padding:50px;
+      }  
+      .phone{
+        width:300px;
+      }
+}
 body{
   display: flex;
   flex-direction: column;
