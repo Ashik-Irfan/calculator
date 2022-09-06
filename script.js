@@ -4,6 +4,9 @@ let opt;
 let lhs = 0,rhs = 0;
 function number(num){
   a=a+num;
+  if(a === '.'){
+    a = '0.';
+  }
   result.innerText = parseFloat(a);
 }
 function clr(){
@@ -22,9 +25,9 @@ function edit(){
   const num = unit.toString().split('').slice(0, -1).join('');
   if(isNaN(parseInt(num))){
     result.innerText = 0;
+    a='';
   }
   else{
-    console.log('else')
     result.innerText = parseInt(num);
   }
 }
@@ -32,7 +35,7 @@ function out(mono){
   rhs = result.innerText;
   a = '';
   if (opt === '+'){
-    result.innerText = parseInt(lhs)+parseInt(rhs);
+    result.innerText = parseFloat(lhs)+parseFloat(rhs);
   }
   else if (opt === '-'){
     result.innerText = lhs-rhs;
