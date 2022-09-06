@@ -4,7 +4,7 @@ let opt;
 let lhs = 0,rhs = 0;
 function number(num){
   a=a+num;
-  result.innerText = parseInt(a);
+  result.innerText = parseFloat(a);
 }
 function clr(){
   result.innerText = 0;
@@ -20,7 +20,13 @@ function operate(str){
 function edit(){
   let unit = result.innerText;
   const num = unit.toString().split('').slice(0, -1).join('');
-  result.innerText = parseInt(num);
+  if(isNaN(parseInt(num))){
+    result.innerText = 0;
+  }
+  else{
+    console.log('else')
+    result.innerText = parseInt(num);
+  }
 }
 function out(mono){
   rhs = result.innerText;
@@ -35,10 +41,19 @@ function out(mono){
     result.innerText = lhs*rhs;
   }
   else if (opt === '/'){
-    result.innerText = (lhs/rhs).toFixed(8);
+    const div = lhs/rhs;
+    if (rhs === '0'){
+      alert('Cannot be divided by 0');
+    }
+    else if (Number.isInteger(div)){
+      result.innerText = div;
+    }
+    else{
+      result.innerText = div.toFixed(8);
+    }
   }
   else if(mono === '%'){
-    result.innerText = (result.innerText/100).toFixed(8);
+    result.innerText = result.innerText/100;
   }
   else if(mono === '+/-'){
     result.innerText = -(result.innerText);
@@ -46,3 +61,5 @@ function out(mono){
   lhs=rhs=0;
   opt = '';
 }
+
+//Edited the edit() function
