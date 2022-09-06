@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
 *{
   font-family: 'Roboto', sans-serif;
   transition: all 0.15s;
@@ -38,7 +38,7 @@ body{
 .output{
   max-width: 272px;
   font-size:35px;
-  font-weight:bold;
+  font-weight:400;
   position:absolute;
   bottom:20px;
   right:20px;
@@ -61,7 +61,7 @@ body{
   border:none;
   font-size:20px;
   margin:5px;
-  font-weight:bolder;
+  font-weight:400;
   cursor: pointer;
 }
 .btn{
