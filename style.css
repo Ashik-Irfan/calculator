@@ -63,6 +63,13 @@ body{
   margin:5px;
   font-weight:400;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 .btn{
   background:rgb(245,247,250);
